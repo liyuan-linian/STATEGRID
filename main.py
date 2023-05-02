@@ -15,6 +15,7 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 import uuid
 import os
+import datetime
 
 PROFILE_FILE = "profiles.json"
 
@@ -183,12 +184,23 @@ def login():
         password = request.form.get('password', None)
         remember_me = request.form.get('remember_me', False)
         user = User(user_name)
-        user.password = '111'
         if user.verify_password(password):
             login_user(user, remember=remember_me)
             return redirect(url_for('hi'))
     return render_template('login.html', title='Sign in', form=form)
 
+@app.route('/change',methods=['GET', 'POST'])
+@login_required
+def change():
+    pass
 
 if __name__ == '__main__':
+    """
+        with app.app_context():
+        dianlu1 = Dianlu(id=2, sub_subject='基础知识', content='just a test',
+                         submission_date=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        db.session.add(dianlu1)
+        db.session.commit()
+    """
+
     app.run()
