@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这里是电路</title>
+
+</head>
+<body>
+<textarea cols="30" rows="10"></textarea>
+<div class="btn">
+    <button>提交</button>
+</div>
+
+<tbody>
+            {% for i in dianlu %}
+               <tr>
+                  <td>{{ i.id }}</td>
+                  <td>{{ i.sub_subject }}</td>
+                  <td>{{ i.content }}</td>
+                  <td>{{ i.submission_date }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+
+<ul class="msg">
+
+</ul>
+
+    <script>
+   let btn=document.querySelector("button"),//获得button元素
+            textArea=document.querySelector("textarea"),
+            msg=document.querySelector(".msg");
+        btn.onclick=function(){
+            if(textArea.value){
+                msg.innerHTML+="<li class='msglist'>"+textArea.value+"</li>";//将标签信息添加到ul中
+                textArea.value="";//清空输入框
+            }else{
+                alert("你尚未输入信息,请重新输入")
+            }
+        }
+    </script>
+</body>
+</html>

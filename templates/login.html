@@ -1,0 +1,34 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+</head>
+<body>
+<div id="login-box">
+    <h1>Login</h1>
+    <div class="form">
+        <form action=" {{ url_for('login') }}" method="POST">
+            <div align="center" class="item">
+                <i class="fa fa-github-alt" style="font-size:24px"></i>
+                <input type="text" name="username" placeholder="Username" />
+            </div>
+
+            <div align="center" class="item">
+                <i class="fa fa-github-alt" style="font-size:24px"></i>
+                <input type="password" name="password" placeholder="Password" />
+            </div>
+
+            <div align="center" >
+                <input type="submit" value="确定" class="button"/>
+                <input type="submit" value="别点" class="button">
+            </div>
+            <input type="checkbox" name="remember_me"/>Remember Me
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>

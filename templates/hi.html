@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>李予安的资料站</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/hi.css">
+</head>
+<body>
+<div id='box0'>
+    <h1 id='top' align="center"> 这里是我国网复习的资料综合站</h1>
+</div>
+
+<div id='box1'>
+    <h1 id='linker'> 下面是各个考试科目的链接 </h1>
+    <div class='subject'>
+        <p align="center"><a href="{{ url_for('dianlu') }}" > 电路 </a></p>
+    </div>
+    <div class='subject'>
+        <p align="center"><a href="{{ url_for('dianji') }}"> 电机 </a></p>
+    </div>
+    <div class='subject'>
+        <p align="center"><a href="{{ url_for('dianfen') }}"> 电分 </a></p>
+    </div>
+    <div class='subject'>
+        <p align="center"><a href=""> 高压 </a></p>
+    </div>
+    <div class='subject'>
+        <p align="center"><a href=""> 电力电子</a></p>
+    </div>
+    <div class='subject'>
+       <p  align="center"><a href="{{ url_for('jibao') }}"> 继保 </a></p>
+    </div>
+</div>
+
+
+<div>
+    <h1 align="center">关于本站</h1>
+</div>
+</body>
+</html>

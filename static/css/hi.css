@@ -1,0 +1,54 @@
+body
+{
+
+    background: url("../images/2.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#box0
+{
+    margin: auto;
+}
+#top
+{
+    border-radius:25px;
+    color:rgb(255,20,147);
+    background-image: linear-gradient(to bottom right, rgb(138,43,226), rgb(255,182,193));
+    border-radius: 25px;
+    padding: 20px;
+    width: 450px;
+    height: 50px;
+    box-shadow: 10px 10px #888888;
+    height = 50px;
+    margin: auto;
+}
+#linker
+{
+    width: 150px;
+    animation: tf;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+#box1
+{
+    float:left;
+}
+
+
+.subject
+{
+    width = 20px;
+    height = 20px;
+    background-color: rgb(0,255,127);
+    border:2px solid;
+    border-radius:2px;
+}
+
+@keyframes tf
+{
+
+    from {transform: rotateX(0deg);}
+    to   {transform: rotateX(180deg);}
+}
